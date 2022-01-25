@@ -1,0 +1,139 @@
+@font-face {
+  font-family: 'roboto';
+  src: url(../fonts/Roboto/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: 'roboto-bold';
+  src: url(../fonts/Roboto/Roboto-Bold.ttf);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 50px;
+  font-family: 'roboto', Arial, Helvetica, sans-serif;
+}
+
+h1{
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin-bottom: 2rem;
+  font-family: 'roboto-bold';
+}
+h2{
+  font-size: 1.5rem;
+  font-family: 'roboto-bold';
+  padding-right: 10%;
+}
+h3{
+  font-size: 0.8rem;
+  font-family: 'roboto-bold';
+  padding-left: 3%;
+}
+
+a{
+  color: unset;
+}
+span{
+  font-size: 1.5rem;
+  color: #000;
+}
+img{
+  width: 100%;
+}
+
+.pageone{
+  grid-column: 1/2;
+  display: grid;
+  padding: 5%;
+}
+.pageone h3{
+  text-transform: uppercase;
+}
+.pageone article{
+  padding: 15% 3% 15% 3%;
+
+}
+.content{
+  font-size: 1.1rem;
+  line-height: 2.0rem;
+  color: #666;
+  width: 60%;
+}
+
+.pagetwo{
+  grid-column: 2/3;
+  padding: 3%;
+  width: 100%;
+  background-color: #F3F3F3;
+}
+.pagetwo h3{
+  color: #999;
+}
+
+
+/* -------- Footer ----------- */
+footer{
+  display: grid;
+  grid-column: 1/3;
+  grid-row: 2/3;
+  grid-template-columns: 50% 50%;
+}
+footer section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer section:nth-of-type(1){
+  background-color: #F3F3F3;
+  padding-left: 3%;
+}
+footer section article{
+  width: 40%;
+  text-align: right;
+}
+footer section article p{
+  color: #999;
+  padding-right: 10%;
+}
+.fas{
+  padding: 2rem;
+  font-size: 1rem;
+}
+.fa-arrow-right{
+  background-color: black;
+  color: #F3F3F3;
+}
+.fab{
+  font-size: 1.2rem;
+  padding-left: 12px;
+}
+.fa-facebook-f:hover{
+    color: #1877F2;
+}
+.fa-twitter:hover{
+  color: #1DA1F2;
+}
+
+@media screen and (max-width:1023px){
+  body{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 10%;
+  }
+  .pageone{
+      grid-column: 1/2;
+   
+  }
+  .pagetwo{
+      grid-column: 1/2;
+     
+  }
+  footer{
+      grid-row:3/4;
+  }
+}
